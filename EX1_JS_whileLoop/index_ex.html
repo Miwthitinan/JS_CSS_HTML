@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ตัวอย่าง While Loop </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <p id="dev"></p>
+
+    <script>
+      let counter = 5;
+      let text = "";
+
+      while (counter < 10) {
+        text += "นับครั้งที่ " +  counter + "<br>";
+        counter++;
+      }
+      document.getElementById("dev").innerHTML = text;
+
+    </script>
+  </body>
+</html>

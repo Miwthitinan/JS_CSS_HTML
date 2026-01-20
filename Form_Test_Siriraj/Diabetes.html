@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <title>Test Siriraj</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <style>
+    p1{
+      border-bottom: 3px solid rgb(0, 0, 0);
+    }
+    .dashed-border-box {
+      border: 2px dashed #333; /* ความหนา 2px, สไตล์เส้นประ, สีเทาเข้ม */
+      padding: 20px; /* เพิ่มระยะห่างระหว่างขอบกับข้อความข้างใน */
+      border-color: black;
+      width: 850px;
+      margin: auto;
+    }
+    form {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px; /* เพิ่มระยะห่างระหว่างขอบกับข้อความข้างใน */
+      height: 100%;
+      width: 500px;
+      margin: auto;
+    }
+    input[type=text] {
+      width: 50%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type=number]{
+      width: 50%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type=date]{
+      width: 50%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    h2 {
+      text-align: center;
+    }
+    hc{
+      text-align: center
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin: auto;
+    }
+    textarea {
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 14px;
+      resize: none;
+      text-align: center
+    }
+  </style>
+  <body>
+  <h1 style="text-align: center">Diabetes Yearly Report</h1>
+  <h5 style="text-align: center">คลินิกศูนย์เบาหวานศิริราช ศูนย์ความเป็นเลิศเบาหวานศิริราช ตึกหอพักพยาบาล 1 ชั้น 1 รพ.ศิริราช</h5>
+
+  <form>
+    <h2>รายงานประจำปีสำหรับผู้เป็นเบาหวาน</h2>
+      <label>ผลการตรวจ</label>
+      <input type="date" name="date_testresults" value="date_testresults">
+      <br>
+      <br>
+      <label>HN</label>
+      <input type="number" name="hn">
+      <br>
+      <label>ชื่อ-นามสกุล</label>
+      <input type="text" name="name_lastname_hn">
+      <br>
+      <label>อายุ</label>
+      <input type="number" name="age_hn">
+      <br>
+      <label>ความดันโลหิต</label>
+      <input type="text">
+      <label>มิลลิเมตรปรอท</label>
+      <br>
+      <label>น้ำหนัก</label>
+      <input type="number" name="weight"><label>กิโลกรัม</label><br>
+      <label>ส่วนสูง</label>
+      <input type="number" name="height"><label>เซนติเมตร</label><br>
+      <label>ดัชนีมวลกาย</label>
+      <input type="number" name="bmi"><label>kg/m<sup>2</sup></label><br>
+      <label>รอบเอว</label>
+      <input type="number" name="waistcircumference"><label>เซนติเมตร</label><br>
+      <label>รูปร่าง</label>
+      <input type="text" name="shape">
+  </form>
+  <h2>ผลการประเมินภาวะแทรกซ้อนเบาหวาน</h2>
+  <table class="report-table" border="1">
+  <tbody>
+    <tr>
+      <td style="text-align: center; width: 200px;">
+        จอตา<br>
+        <input type="date" id="retina" name="retina" style="width: 100%;text-align: center">
+      </td>
+      <td style="text-align: center; width: 200px">
+        <textarea></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 200px;">
+        อัลบูมินในปัสสาวะ<br>
+        <input type="date" id="albumin" name="albumin" style="width: 100%;text-align: center">
+      </td>
+      <td style="text-align: center ;width: 200px" >
+        <textarea></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center; width: 200px;">
+        ความเสี่ยงในการเกิดแผลที่เท้า<br>
+        <input type="date" id="risk" name="risk" style="width: 100%;text-align: center">
+      </td>
+      <td style="text-align: center; width: 200px" >
+        <textarea></textarea>
+      </td>
+    </tr>
+    </tbody>
+</table>
+<br>
+  <div class="dashed-border-box">
+  <p>การงดสูบบุหรี่ การคุมเบาหวาน ไขมัน และความดันโลหิตให้อยู่ในเกณฑ์ที่เหมาะสม จะลดความเสี่ยงการเกิดภาวะแทรกซ้อนได้ <br>การเรียนรู้เพื่อจัดการตนเอง(DSMES)เมื่อเริ่มเป็นเบาหวานและทบทวนทุก 1 ปี เพื่อให้มีสุขภาวะที่ดี..แม้เป็นเบาหวานก็มีความสุขได้..</p>
+  </div>
+  <br>
+  <table border="1">
+    <caption>
+      <h2>ผลการตรวจทางห้องปฏิบัติการ<h2>
+    </caption>
+    <thead>
+      <tr>
+        <td style="text-align: center">รายละเอียด</td>
+        <td style="text-align: center">ผลการตรวจ</td>
+        <td style="text-align: center" >ค่าที่เหมาะสม</td>
+      </tr>
+    </thead>
+    <tbody>
+       <tr>
+          <td>ค่าระดับน้ำตาลขณะอดอาหาร (FPG) มก./ดล.</td>
+          <td><input type="text" id ="fpg" name="fpg" style="width: 100%"></td>
+          <td style="text-align: center">80-130</td>
+        </tr>
+        <tr>
+          <td>ค่าน้ำตาลสะสม(A1C)%</td>
+          <td><input type="text" id ="A1C" name="A1C" style="width: 100%"></td>
+          <td style="text-align: center"> <7 </td>
+        </tr>
+        <tr>
+          <td>ระดับไขมันรวม(Cholesterol) มก./ดล</td>
+          <td><input type="text" id ="Cholesterol" name="Cholesterol" style="width: 100%"></td>
+          <td style="text-align: center">-</td>
+        </tr>
+        <tr>
+          <td>ระดับไขมันไตรกลีเซอร์ไรด์(Triglyceride) มก./ดล</td>
+          <td><input type="text" id ="Triglyceride" name="Triglyceride" style="width: 100%"></td>
+          <td style="text-align: center"><150</td>
+        </tr>
+        <tr>
+          <td>ระดับไขมันดี (HDL-C)มก./ดล</td>
+          <td><input type="text" id ="HDL" name="HDL" style="width: 100%"></td>
+          <td style="text-align: center"> > 40 ในเพศชาย<br> > 50 ในเพศหญิง</td>
+        </tr>
+        <tr>
+          <td>ระดับไขมันดี (LDL-C)มก./ดล</td>
+          <td><input type="text" id ="LDL" name="LDL" style="width: 100%"></td>
+          <td style="text-align: center"><100</td>
+        </tr>
+        <tr>
+          <td>ค่าการทำงานของไต (Creatinine) มก./ดล</td>
+          <td><input type="text" id ="Creatinine" name="Creatinine" style="width: 100%"></td>
+          <td style="text-align: center">0.67-1.17 ในเพศชาย <br>0.51-0.95 ในเพศหญิง</td>
+        </tr>
+        <tr>
+          <td>อัตราการกรองของไต (eGFR) ml/min/1.73m<sup>2</sup></td>
+          <td><input type="text" id ="GFR" name="GFR" style="width: 100%"></td>
+          <td style="text-align: center">-</td>
+        </tr>
+    </tbody>
+  </table>
+  <h5 style="text-align: center">*เป็นผลการตรวจทางห้องปฏิบัติการครั้งล่าสุดที่ท่านมารับการตรวจภายใน 1 ปี</h5>
+
+  <hc><h4>หมายเหตุ โปรดนำเอกสารนี้ มาพบแพทย์ของท่านในวันนัดครั้งต่อไป<h4></hc>
+  </body>
+</html>

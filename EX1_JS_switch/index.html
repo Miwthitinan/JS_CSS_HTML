@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ตัวอย่าง switch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <p id="dev"></p>
+    <script>
+      let dayNumber = 9;
+      let dayName;
+
+      switch (dayNumber) {
+        case 1:
+          dayName = "วันอาทิตย์";
+          break;
+        case 2:
+          dayName = "วันจันทร์";
+          break;
+        case 3:
+          dayName = "วันอังคาร";
+          break;
+        case 4:
+          dayName = "วันพุธ";
+          break;
+        case 5:
+          dayName = "วันพฤหัสบดี";
+          break;
+        case 6:
+          dayName = "วันศุกร์";
+          break;
+        case 7:
+          dayName = "วันเสาร์";
+          break;
+        default:
+          dayName = "หมายเลขวันไม่ถูกต้อง";
+      }
+      document.getElementById("dev").innerHTML = dayName;
+    </script>
+  </body>
+</html>

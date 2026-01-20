@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <title>Test Siriraj</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <style>
+    html {
+      margin: auto;
+      background-color: #ffffff;
+      /* box-sizing: border-box;
+      border: 1px solid #e0e0e0; */
+      height: 100%;
+      width: 1000px;
+      padding: 10px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin: auto;
+    }
+    textarea {
+      width: 100%;
+      height: 700px;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    input[type=text]{
+      width:200px;
+      margin: 8px 0;
+      font-size: 14px;
+    }
+    .dashed-border-box {
+      border: 1px solid #333;
+      padding: 20px;
+      border-color: black;
+      width: 850px;
+      margin: auto;
+    }
+    
+  </style>
+  <body>
+    <h1>แบบบันทึกการให้คำปรึกษา SiCDE TEAM<br><h3>ศูนย์เบาหวานศิริราช คณะแพทยศาสตร์ศิริราชพยาบาล <br>Siriraj Diabetes Center of Excellence</h3> </h1>
+    <table>
+      <thead>
+        <td style="width: 300px;text-align: center">ประเด็นปัญหา</td>
+        <td style="width: 300px;text-align: center">แนวทางการแก้ปัญหา/ผู้ป่วยสนใจจะทำ</td>
+        <td style="width: 200px;text-align: center">เป้าหมาย</td>
+        <td style="width: 100px;text-align: center">Stage of<br>Change</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="4"><label>เป้าหมายการควบคุมน้ำตาล (ตกลงร่วมกันกับผู้ป่วย)</label><input type="text" nema="sugar_control" style="border: 1px solid #ccc;width: 200px;"><br>
+          <label>FBS</label><input type="text" name="fbs" style="width: 100px;"><label>mg/dl</label>
+          <label>HbA1c</label><input type="text" name="hba1c" style="width: 100px;"><label>%</label></td>
+        </tr>
+      </tbody>
+    </table>
+    <h4 style="text-align: center;">*Stage of change: 1=Pre-contemplation,2=Contemplation,3=Proparation,4=Action,5=Maintenance<h4></h4>
+    <br>
+    <div class="dashed-border-box">
+      <h4>EQ-5D-5L :</h4>
+      <label>การเคลื่อนไหว </label><input type="text" name="movement" style="width: 50px;"><label>/5</label><br>
+      <label>การดูแลตนเอง </label><input type="text" name="sef_care" style="width: 50px;"><label>/5</label><br>
+      <label>กิจกรรมที่ทำประจำ </label><input type="text" name="regular_activities" style="width: 50px;"><label>/5</label><br>
+      <label>อาการเจ็บปวด/อาการไม่สบายตัว </label><input type="text" name="pain" style="width: 50px;"><label>/5</label><br>
+      <label>ความวิตกกังวล/ความซึมเศร้า </label><input type="text" name="anxiety" style="width: 50px;"><label>/5</label><br>
+      <label>สรุปคะแนนสุขภาพ </label><input type="text"  name="health_score_summary" style="width: 50px;"><label>/25<span>คะแนน</span></label><br>
+      <label>สเกลวัดสุขภาพ(โดยผู้เป็นเบาหวานให้คะแนนสุขภาพที่ดีที่สุดตามความคิดของตนเองเป็นคะแนน 0-100) </label><input type="text" name="health_scale" style="width: 50px;"><label>/100 คะแนน</label>
+    </div>
+    <br>
+    <table>
+      <thead>
+        <td colspan="2" style="width:40%;">หัวข้อให้คำแนะนำ (DSME)</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" id="checkbox1" name="checkbox1"><label>ความรู้เบื้องต้นเกี่ยวกับโรคเบาหวาน</label></td>
+          <td><input type="checkbox" id="checkbox2" name="checkbox2"><label>ภาวะแทรกซ้อนเรื้องรัง</label></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="checkbox3" name="checkbox3"><label>โภชนบำบัด/การนับคาร์โบไฮเดรต</label></td>
+          <td><input type="checkbox" id="checkbox4" name="checkbox4"><label>การตรวจคีโตนและการแปลผล</label></td>
+        <tr>
+          <td><input type="checkbox" id="checkbox5" name="checkbox5"><label>ภาวะแทรกช้อนเฉียบพลันและการแก้ไข</label></td>
+          <td><input type="checkbox" id="checkbox6" name="checkbox6"><label>การออกกำลังกาย</label></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="checkbox7" name="checkbox7"><label>การใช้ยาเม็ดลดระดับน้ำตาล</label></td>
+          <td><input type="checkbox" id="checkbox8" name="checkbox8"><label>การดูแลเท้า</label></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="checkbox9" name="checkbox9"><label>การใช้ยาฉีดอินซูลิน</label><br>
+            <input type="radio" name="radio_action"><label>การออกฤทธิ์และผลข้างเคียง</label><br>
+            <input type="radio" name="radio_insulin"><label>เทคนิคการฉีดอินซูลินที่ถูกวิธี</label>
+          </td>
+          <td><input type="checkbox" id="checkbox10" name="checkbox10"><label>การดูแลตนเองในภาวะพิเศษ<br>(เจ็บป่วย,เดินทาง,งานเลี้ยง)</label></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="checkbox11" name="checkbo11"><label>Psychosocial aspect</label></td>
+          <td><input type="checkbox" id="checkbox12" name="checkbox12"><label>อื่น</label><input type="text" style="border-bottom-style: dotted;border-top-style: none;border-right-style: none;border-left-style: none;width: 80%;"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+</html>

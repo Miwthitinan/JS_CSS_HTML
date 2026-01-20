@@ -1,0 +1,36 @@
+/* ใช้ body เพื่อจัดหน้าให้อยู่ตรงกลาง */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #f4f4f4;
+}
+
+/* เลือกโดยใช้ชื่อ Tag */
+h1 {
+    color: navy; /* สีน้ำเงินเข้ม */
+}
+
+/* เลือกโดยใช้ id (เครื่องหมาย #) */
+#message {
+    font-size: 18px;
+    color: green; /* สีเขียว */
+}
+
+/* เลือกปุ่มโดยใช้ id */
+#myButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer; /* เปลี่ยนเมาส์เป็นรูปมือ */
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* เพิ่มลูกเล่นเมื่อเอาเมาส์ไปวาง (hover) */
+#myButton:hover {
+    background-color: royalblue;
+}

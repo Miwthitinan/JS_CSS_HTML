@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <title>Test Siriraj</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <style>
+    input[type=text] {
+      width: 50%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    input[type=number]{
+      width: 50%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    input[type=date]{
+      width: 50%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    input[type=submit]{
+      width: 200px;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 20px;
+    }
+    .div{
+      background-color: #e4e1e1d8;
+      width: 100%;
+      height: 12%;
+      text-align: center
+    }
+    fieldset {
+      background-color: #f7f7f7d5;
+      width: 70%;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <h2 class="div">แบบบันทึกการลงทะเบียนสำหรับผู้เป็นเบาหวาน คณะแพทยศาสตร์ศิริราชพยาบาล</h2>
+    
+    <form action="http://103.253.73.15/patients/api/regis-patient-add-form" method="post"> 
+      <fieldset>
+        <legend><h3>การลงทะเบียน</h3></legend>
+        <label>วันที่</label>
+        <input type="date" id="registration_date" name="registration_date">
+        <br>
+        <br>
+        <label>Registry code</label>
+        <input type="number" id="registry_code" name="registry_code">
+      </fieldset>
+      <fieldset>
+        <legend><h3>ข้อมูลผู้ป่วย</h3></legend>
+        <label>ชื่อ</label>
+        <input type="text" id="patient_name" name="patient_name" style="width: 500px;"><br>
+        <label>นามสกุล</label>
+        <input type="text" id="last_name" name="last_name" style="width: 500px;">
+        <br>
+        <br>
+        <label>HN : </label>
+        <input type="number" id="hn" name="hn"><br>
+
+        <h4>ที่อยู่</h4>
+        <input type="radio" id="Original_address" name="address_choice" value="Original_address">
+        <label for="Original_address">ที่อยู่เดิม</label>
+        <br>
+        <input type="radio" id="new_address_radio" name="address_choice" value="New_address">
+        <label for="new_address_radio">ที่อยู่ใหม่</label>
+        <label>ระบุ</label>
+        <input type="text" id="specify_address" name="specify_address">
+
+        <h4>เบอร์โทรศัพท์</h4>
+        <input type="radio" id="phone_original" name="phone_choice" value="Original_phone">
+        <label for="phone_original">เบอร์โทรศัพท์เดิม</label>
+        <br>
+        <input type="radio" id="phone_new_radio" name="phone_choice" value="New_phone">
+        <label for="phone_new_radio">เบอร์โทรศัพท์ใหม่</label>
+        <label>ระบุ</label>
+        <input type="number" id="phone_number_new" name="phone_number_new">
+
+        <h4>ข้อมูลผู้ป่วยเพิ่มเติม</h4>
+        <input type="checkbox" id="edta_tube" name="edta_tube">
+        <label>ให้ EDTA Tube วันนี้ ส่งตรวจ</label>
+        
+        <input type="checkbox" id="dr" name="dr">
+        <label>DR</label>
+
+        <input type="checkbox" id="mau" name="mau">
+        <label><span>MAU/Cr</span></label>
+
+        <input type="checkbox" id="foot" name="foot">
+        <label>เท้า</label>
+        <br>
+        <input type="checkbox" id="drug" name="drug">
+        <label>พบยาที่ใช้ร่วมกัน</label>
+        <br>
+        <br>
+        
+        <input type="submit" id="submit" name="submit"></input> 
+        
+      </fieldset>
+    </form>
+  </body>
+</html>
