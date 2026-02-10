@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Todo List</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .app {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+            background: #eee;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
+        }
+
+        .done {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        button {
+            border: none;
+            background: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+    <h2>Todo List</h2>
+    <input id="todoInput" placeholder="พิมพ์งานแล้วกด Enter">
+    <ul id="todoList"></ul>
+    </div>
+
+    <script>
+        const input = document.getElementById("todoInput");
+        const list = document.getElementById("todoList");
+
+        let todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+        function save() {
+            localStorage.setItem("todos", JSON.stringify(todos));
+        }
+
+        function render() {
+            list.innerHTML = "";
+
+            todos.forEach((todo, index) => {
+            const li = document.createElement("li");
+
+            const left = document.createElement("div");
+            left.style.display = "flex";
+            left.style.alignItems = "center";
+            left.style.gap = "10px";
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.checked = todo.done;
+
+            const text = document.createElement("span");
+            text.textContent = todo.text;
+            if (todo.done) text.classList.add("done");
+
+            checkbox.addEventListener("change", () => {
+                todo.done = checkbox.checked;
+                save();
+                render();
+            });
+
+            left.appendChild(checkbox);
+            left.appendChild(text);
+
+            const delBtn = document.createElement("button");
+            delBtn.textContent = "ลบ";
+
+            delBtn.addEventListener("click", () => {
+                todos.splice(index, 1);
+                save();
+                render();
+            });
+
+            li.appendChild(left);
+            li.appendChild(delBtn);
+            list.appendChild(li);
+            });
+        }
+
+        input.addEventListener("keypress", (e) => {
+            if (e.key === "Enter" && input.value.trim() !== "") {
+            todos.push({
+                text: input.value,
+                done: false
+            });
+
+            input.value = "";
+            save();
+            render();
+            }
+        });
+
+        render();
+    </script>
+
+</body>
+</html>
