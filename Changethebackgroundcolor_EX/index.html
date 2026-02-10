@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Change Background</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding-top: 100px;
+            transition: 0.3s;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .red { background: #ff4d4d; color: white; }
+        .green { background: #4CAF50; color: white; }
+        .blue { background: #2196F3; color: white; }
+        .reset { background: #333; color: white; }
+    </style>
+</head>
+
+<body>
+
+    <h2>เปลี่ยนสีพื้นหลัง</h2>
+
+    <button class="red">แดง</button>
+    <button class="green">เขียว</button>
+    <button class="blue">น้ำเงิน</button>
+    <button class="reset">Reset</button>
+
+    <script>
+        const redBtn = document.querySelector(".red");
+        const greenBtn = document.querySelector(".green");
+        const blueBtn = document.querySelector(".blue");
+        const resetBtn = document.querySelector(".reset");
+
+        redBtn.addEventListener("click", () => {
+            document.body.style.backgroundColor = "red";
+        });
+
+        greenBtn.addEventListener("click", () => {
+            document.body.style.backgroundColor = "green";
+        });
+
+        blueBtn.addEventListener("click", () => {
+            document.body.style.backgroundColor = "blue";
+        });
+
+        resetBtn.addEventListener("click", () => {
+            document.body.style.backgroundColor = "white";
+        });
+    </script>
+
+</body>
+</html>
