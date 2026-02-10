@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            width: 300px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+    <h2>Login</h2>
+
+    <input id="username" placeholder="Username">
+    <div id="userError" class="error"></div>
+
+    <input id="password" type="password" placeholder="Password">
+    <div id="passError" class="error"></div>
+
+    <button id="loginBtn">Login</button>
+    </div>
+
+    <script>
+        const username = document.getElementById("username");
+        const password = document.getElementById("password");
+        const loginBtn = document.getElementById("loginBtn");
+
+        const userError = document.getElementById("userError");
+        const passError = document.getElementById("passError");
+
+        loginBtn.addEventListener("click", () => {
+            userError.textContent = "";
+            passError.textContent = "";
+
+            let isValid = true;
+
+            // เช็ค username ว่าง
+            if (username.value.trim() === "") {
+            userError.textContent = "กรุณากรอก username";
+            isValid = false;
+            }
+
+            // เช็ค password ว่าง
+            if (password.value.trim() === "") {
+            passError.textContent = "กรุณากรอก password";
+            isValid = false;
+            }
+
+            // เช็คความยาว password
+            else if (password.value.length < 6) {
+            passError.textContent = "password ต้องอย่างน้อย 6 ตัว";
+            isValid = false;
+            }
+
+            // ถ้าผ่านทั้งหมด
+            if (isValid) {
+            alert("login success");
+            }
+        });
+    </script>
+</body>
+</html>
